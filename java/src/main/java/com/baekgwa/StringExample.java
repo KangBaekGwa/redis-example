@@ -78,6 +78,7 @@ public class StringExample {
 			// incr 과 반대로 동작합니다.
 			// 키가 없으면 0 으로 초기화 후 -1 반환
 			System.out.println("=========decr=========");
+			command.set("viewCount", "1");
 			Long decreasedCount = command.decr("viewCount");
 			System.out.println("감소된 조회수 : " + decreasedCount);
 
@@ -85,15 +86,17 @@ public class StringExample {
 			// incrby 명령어는 값을 특정 수만큼 증가시킵니다.
 			// incr 은 무조건 1 증가, incrby 는 원하는 수만큼 증가 가능
 			System.out.println("=========incrby=========");
+			command.set("viewCount", "0");
 			Long incrByCount = command.incrby("viewCount", 10);
-			System.out.println("10 증가된 조회수 : " + incrByCount);
+			System.out.println("0 -> 10 증가된 조회수 : " + incrByCount);
 
 			// 6. decrby
 			// decrby 명령어는 값을 특정 수만큼 감소시킵니다.
 			// decr 은 무조건 1 감소, decrby 는 원하는 수만큼 감소 가능
 			System.out.println("=========decrby=========");
+			command.set("viewCount", "10");
 			Long decrByCount = command.decrby("viewCount", 5);
-			System.out.println("5 감소된 조회수 : " + decrByCount);
+			System.out.println("10 -> 5 감소된 조회수 : " + decrByCount);
 
 			// 7. mset
 			// mset 명령어는 여러 키-값 쌍을 한번에 저장합니다.

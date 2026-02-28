@@ -3,6 +3,7 @@ package com.baekgwa.spring;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
+import com.baekgwa.spring.example.ListExample;
 import com.baekgwa.spring.example.StringExample;
 
 /**
@@ -20,13 +21,16 @@ import com.baekgwa.spring.example.StringExample;
 public class ExampleRunner implements CommandLineRunner {
 
 	private final StringExample stringExample;
+	private final ListExample listExample;
 
-	public ExampleRunner(StringExample stringExample) {
+	public ExampleRunner(StringExample stringExample, ListExample listExample) {
 		this.stringExample = stringExample;
+		this.listExample = listExample;
 	}
 
 	@Override
 	public void run(String... args) {
-		stringExample.run();
+		// stringExample.run();
+		listExample.run();
 	}
 }

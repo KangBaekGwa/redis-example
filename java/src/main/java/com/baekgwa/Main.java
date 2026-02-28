@@ -8,6 +8,6 @@ public class Main {
 		StringExample.start();
 
 		// 2. List 예제
-		//ListExample.start();
+		ListExample.start();
 	}
 }
