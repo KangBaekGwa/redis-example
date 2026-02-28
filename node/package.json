@@ -1,0 +1,18 @@
+{
+  "name": "redis-node-example",
+  "version": "1.0.0",
+  "description": "Redis String 타입 예제",
+  "main": "src/string-example.js",
+  "scripts": {
+    "start": "node src/string-example.js",
+    "string": "ts-node src/string/index.ts"
+  },
+  "dependencies": {
+    "ioredis": "^5.3.2"
+  },
+  "devDependencies": {
+    "@types/node": "^25.3.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}

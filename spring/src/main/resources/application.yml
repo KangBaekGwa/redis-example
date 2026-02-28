@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: spring
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      # connection timeout
+      connect-timeout: 30s
+      # read timeout
+      timeout: 10s

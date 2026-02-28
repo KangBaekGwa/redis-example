@@ -1,0 +1,24 @@
+/.claude
+
+# ========================
+# IDE
+# ========================
+**/.idea/
+**/*.iml
+
+# ========================
+# Gradle (java, spring)
+# ========================
+**/.gradle/
+**/build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# ========================
+# Node.js (node)
+# ========================
+**/node_modules/
+**/npm-debug.log*
+**/yarn-debug.log*
+**/yarn-error.log*
+**/.env
