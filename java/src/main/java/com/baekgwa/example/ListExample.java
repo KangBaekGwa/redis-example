@@ -1,4 +1,4 @@
-package com.baekgwa;
+package com.baekgwa.example;
 
 import java.util.List;
 
@@ -19,11 +19,6 @@ import io.lettuce.core.api.sync.RedisCommands;
  * ---------------------------------------------------------------------------------------------------------------------
  * 2026-02-28     Baekgwa               Initial creation
  **/
-// Redis List 는 Doubly Linked List 구조
-// 양 끝(Left/Right) 에서 O(1) 으로 삽입/삭제 가능
-// 인덱스 기반 접근은 O(N)
-// Queue(큐): rpush → lpop  (오른쪽에 넣고, 왼쪽에서 꺼내기)
-// Stack(스택): lpush → lpop  (왼쪽에 넣고, 왼쪽에서 꺼내기)
 public class ListExample {
 
 	public static void start() {

@@ -1,13 +1,20 @@
 package com.baekgwa;
 
+import com.baekgwa.example.ListExample;
+import com.baekgwa.example.SetExample;
+import com.baekgwa.example.StringExample;
+
 public class Main {
 
 	public static void main(String[] args) {
 
 		// 1. String 예제
-		StringExample.start();
+		// StringExample.start();
 
 		// 2. List 예제
-		ListExample.start();
+		// ListExample.start();
+
+		// 3. Set 예제
+		SetExample.start();
 	}
 }

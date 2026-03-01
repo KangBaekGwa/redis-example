@@ -1,4 +1,4 @@
-package com.baekgwa;
+package com.baekgwa.example;
 
 import java.util.HashMap;
 import java.util.List;

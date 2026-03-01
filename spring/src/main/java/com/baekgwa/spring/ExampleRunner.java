@@ -4,6 +4,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 import com.baekgwa.spring.example.ListExample;
+import com.baekgwa.spring.example.SetExample;
 import com.baekgwa.spring.example.StringExample;
 
 /**
@@ -22,15 +23,18 @@ public class ExampleRunner implements CommandLineRunner {
 
 	private final StringExample stringExample;
 	private final ListExample listExample;
+	private final SetExample setExample;
 
-	public ExampleRunner(StringExample stringExample, ListExample listExample) {
+	public ExampleRunner(StringExample stringExample, ListExample listExample, SetExample setExample) {
 		this.stringExample = stringExample;
 		this.listExample = listExample;
+		this.setExample = setExample;
 	}
 
 	@Override
 	public void run(String... args) {
 		// stringExample.run();
-		listExample.run();
+		// listExample.run();
+		setExample.run();
 	}
 }
