@@ -35,7 +35,7 @@ import org.springframework.stereotype.Component;
 // Hash 가 유리한 상황: 일부 필드만 업데이트/조회, 필드별 숫자 연산, 메모리 최적화
 // String(JSON) 이 유리한 상황: 전체를 통째로 읽고 쓸 때, 필드별 TTL 필요 시, 중첩 객체
 @Component
-public class HashExample implements CommandLineRunner {
+public class HashExample {
 
 	private static final Logger log = LoggerFactory.getLogger(HashExample.class);
 
@@ -45,7 +45,6 @@ public class HashExample implements CommandLineRunner {
 		this.redisTemplate = redisTemplate;
 	}
 
-	@Override
 	public void run(String... args) {
 		// HashOperations: Hash 타입의 key-value 명령을 담당하는 객체
 		// Java 순수 Lettuce의 RedisCommands에서 Hash 관련 명령만 추출한 것과 유사합니다.

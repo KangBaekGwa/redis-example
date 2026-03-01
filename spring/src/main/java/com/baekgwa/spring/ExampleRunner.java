@@ -7,6 +7,7 @@ import com.baekgwa.spring.example.HashExample;
 import com.baekgwa.spring.example.ListExample;
 import com.baekgwa.spring.example.SetExample;
 import com.baekgwa.spring.example.StringExample;
+import com.baekgwa.spring.example.ZSetExample;
 
 /**
  * PackageName : com.baekgwa.spring
@@ -26,12 +27,14 @@ public class ExampleRunner implements CommandLineRunner {
 	private final ListExample listExample;
 	private final SetExample setExample;
 	private final HashExample hashExample;
+	private final ZSetExample zSetExample;
 
-	public ExampleRunner(StringExample stringExample, ListExample listExample, SetExample setExample, HashExample hashExample) {
+	public ExampleRunner(StringExample stringExample, ListExample listExample, SetExample setExample, HashExample hashExample, ZSetExample zSetExample) {
 		this.stringExample = stringExample;
 		this.listExample = listExample;
 		this.setExample = setExample;
 		this.hashExample = hashExample;
+		this.zSetExample = zSetExample;
 	}
 
 	@Override
@@ -39,6 +42,7 @@ public class ExampleRunner implements CommandLineRunner {
 		// stringExample.run();
 		// listExample.run();
 		// setExample.run();
-		hashExample.run();
+		// hashExample.run();
+		zSetExample.run();
 	}
 }

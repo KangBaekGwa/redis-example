@@ -27,7 +27,7 @@ import org.springframework.stereotype.Component;
 // 중복을 허용하지 않으며, 합집합/교집합/차집합 등 집합 연산을 O(N) 으로 지원
 // 활용 사례: 좋아요 목록, 팔로워/팔로잉, 태그, 방문자 추적 등
 @Component
-public class SetExample implements CommandLineRunner {
+public class SetExample {
 
 	private static final Logger log = LoggerFactory.getLogger(SetExample.class);
 
@@ -37,7 +37,6 @@ public class SetExample implements CommandLineRunner {
 		this.redisTemplate = redisTemplate;
 	}
 
-	@Override
 	public void run(String... args) {
 		// SetOperations: Set 타입의 key-value 명령을 담당하는 객체
 		// Java 순수 Lettuce의 RedisCommands에서 Set 관련 명령만 추출한 것과 유사합니다.

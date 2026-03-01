@@ -28,7 +28,7 @@ import org.springframework.stereotype.Component;
 // Queue(큐): rpush → lpop  (오른쪽에 넣고, 왼쪽에서 꺼내기)
 // Stack(스택): lpush → lpop  (왼쪽에 넣고, 왼쪽에서 꺼내기)
 @Component
-public class ListExample implements CommandLineRunner {
+public class ListExample {
 
 	private static final Logger log = LoggerFactory.getLogger(ListExample.class);
 
@@ -38,7 +38,6 @@ public class ListExample implements CommandLineRunner {
 		this.redisTemplate = redisTemplate;
 	}
 
-	@Override
 	public void run(String... args) {
 		// ListOperations: List 타입의 key-value 명령을 담당하는 객체
 		// Java 순수 Lettuce의 RedisCommands에서 List 관련 명령만 추출한 것과 유사합니다.

@@ -26,7 +26,7 @@ import org.springframework.stereotype.Component;
  * 2025-08-03     Baekgwa               Initial creation
  **/
 @Component
-public class StringExample implements CommandLineRunner {
+public class StringExample {
 
 	private static final Logger log = LoggerFactory.getLogger(StringExample.class);
 
@@ -36,7 +36,6 @@ public class StringExample implements CommandLineRunner {
 		this.redisTemplate = redisTemplate;
 	}
 
-	@Override
 	public void run(String... args) {
 		// ValueOperations: String 타입의 key-value 명령을 담당하는 객체
 		// Java 순수 Lettuce의 RedisCommands에서 String 관련 명령만 추출한 것과 유사합니다.

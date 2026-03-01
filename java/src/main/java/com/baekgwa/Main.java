@@ -4,6 +4,7 @@ import com.baekgwa.example.HashExample;
 import com.baekgwa.example.ListExample;
 import com.baekgwa.example.SetExample;
 import com.baekgwa.example.StringExample;
+import com.baekgwa.example.ZSetExample;
 
 public class Main {
 
@@ -19,6 +20,9 @@ public class Main {
 		// SetExample.start();
 
 		// 4. Hash 예제
-		HashExample.start();
+		// HashExample.start();
+
+		// 5. ZSet 예제
+		ZSetExample.start();
 	}
 }
