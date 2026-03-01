@@ -1,5 +1,6 @@
 package com.baekgwa;
 
+import com.baekgwa.example.HashExample;
 import com.baekgwa.example.ListExample;
 import com.baekgwa.example.SetExample;
 import com.baekgwa.example.StringExample;
@@ -15,6 +16,9 @@ public class Main {
 		// ListExample.start();
 
 		// 3. Set 예제
-		SetExample.start();
+		// SetExample.start();
+
+		// 4. Hash 예제
+		HashExample.start();
 	}
 }
