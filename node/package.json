@@ -9,7 +9,8 @@
     "list": "ts-node src/list/index.ts",
     "set": "ts-node src/set/index.ts",
     "hash": "ts-node src/hash/index.ts",
-    "zset": "ts-node src/zset/index.ts"
+    "zset": "ts-node src/zset/index.ts",
+    "pubsub": "ts-node src/pubsub/index.ts"
   },
   "dependencies": {
     "ioredis": "^5.3.2"

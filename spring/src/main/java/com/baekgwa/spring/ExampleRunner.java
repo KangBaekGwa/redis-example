@@ -5,6 +5,7 @@ import org.springframework.stereotype.Component;
 
 import com.baekgwa.spring.example.HashExample;
 import com.baekgwa.spring.example.ListExample;
+import com.baekgwa.spring.example.PubSubExample;
 import com.baekgwa.spring.example.SetExample;
 import com.baekgwa.spring.example.StringExample;
 import com.baekgwa.spring.example.ZSetExample;
@@ -14,7 +15,7 @@ import com.baekgwa.spring.example.ZSetExample;
  * FileName    : ExampleRunner
  * Author      : Baekgwa
  * Date        : 26. 2. 28.
- * Description : 
+ * Description :
  * =====================================================================================================================
  * DATE          AUTHOR               NOTE
  * ---------------------------------------------------------------------------------------------------------------------
@@ -28,21 +29,25 @@ public class ExampleRunner implements CommandLineRunner {
 	private final SetExample setExample;
 	private final HashExample hashExample;
 	private final ZSetExample zSetExample;
+	private final PubSubExample pubSubExample;
 
-	public ExampleRunner(StringExample stringExample, ListExample listExample, SetExample setExample, HashExample hashExample, ZSetExample zSetExample) {
+	public ExampleRunner(StringExample stringExample, ListExample listExample, SetExample setExample,
+			HashExample hashExample, ZSetExample zSetExample, PubSubExample pubSubExample) {
 		this.stringExample = stringExample;
 		this.listExample = listExample;
 		this.setExample = setExample;
 		this.hashExample = hashExample;
 		this.zSetExample = zSetExample;
+		this.pubSubExample = pubSubExample;
 	}
 
 	@Override
-	public void run(String... args) {
+	public void run(String... args) throws Exception {
 		// stringExample.run();
 		// listExample.run();
 		// setExample.run();
 		// hashExample.run();
-		zSetExample.run();
+		// zSetExample.run();
+		pubSubExample.run();
 	}
 }

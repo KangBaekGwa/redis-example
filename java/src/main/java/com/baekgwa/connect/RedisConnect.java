@@ -3,6 +3,7 @@ package com.baekgwa.connect;
 import io.lettuce.core.RedisClient;
 import io.lettuce.core.RedisURI;
 import io.lettuce.core.api.StatefulRedisConnection;
+import io.lettuce.core.pubsub.StatefulRedisPubSubConnection;
 
 /**
  * PackageName : com.baekgwa.connect
@@ -32,6 +33,13 @@ public class RedisConnect {
 	 */
 	public StatefulRedisConnection<String, String> getConnection() {
 		return client.connect();
+	}
+
+	/**
+	 * Redis Pub/Sub Connection 생성
+	 */
+	public StatefulRedisPubSubConnection<String, String> getPubSubConnection() {
+		return client.connectPubSub();
 	}
 
 	/**
