@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  redis-rdb:
+    image: redis:7.2-alpine
+    container_name: redis-rdb-test
+    ports:
+      - "6379:6379"
+    volumes:
+      # 설정 파일과 데이터 저장 디렉토리 마운트
+      - ./redis-rdb.conf:/usr/local/etc/redis/redis.conf
+      - ./data-rdb:/data
+    # 작성한 conf 파일을 기반으로 redis 서버 실행
+    command: redis-server /usr/local/etc/redis/redis.conf

@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  redis-hybrid:
+    image: redis:7.2-alpine
+    container_name: redis-hybrid-test
+    ports:
+      - "6381:6379"
+    volumes:
+      - ./redis-hybrid.conf:/usr/local/etc/redis/redis.conf
+      - ./data-hybrid:/data
+    command: redis-server /usr/local/etc/redis/redis.conf
