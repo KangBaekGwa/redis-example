@@ -5,6 +5,7 @@ import org.springframework.stereotype.Component;
 
 import com.baekgwa.spring.example.CouponFailureExample;
 import com.baekgwa.spring.example.HashExample;
+import com.baekgwa.spring.example.LuaScriptExample;
 import com.baekgwa.spring.example.ListExample;
 import com.baekgwa.spring.example.PipeliningExample;
 import com.baekgwa.spring.example.PubSubExample;
@@ -36,11 +37,12 @@ public class ExampleRunner implements CommandLineRunner {
 	private final TransactionExample transactionExample;
 	private final PipeliningExample pipeliningExample;
 	private final CouponFailureExample couponFailureExample;
+	private final LuaScriptExample luaScriptExample;
 
 	public ExampleRunner(StringExample stringExample, ListExample listExample, SetExample setExample,
 			HashExample hashExample, ZSetExample zSetExample, PubSubExample pubSubExample,
 			TransactionExample transactionExample, PipeliningExample pipeliningExample,
-			CouponFailureExample couponFailureExample) {
+			CouponFailureExample couponFailureExample, LuaScriptExample luaScriptExample) {
 		this.stringExample = stringExample;
 		this.listExample = listExample;
 		this.setExample = setExample;
@@ -50,6 +52,7 @@ public class ExampleRunner implements CommandLineRunner {
 		this.transactionExample = transactionExample;
 		this.pipeliningExample = pipeliningExample;
 		this.couponFailureExample = couponFailureExample;
+		this.luaScriptExample = luaScriptExample;
 	}
 
 	@Override
@@ -62,6 +65,7 @@ public class ExampleRunner implements CommandLineRunner {
 		// pubSubExample.run();
 		// transactionExample.run();
 		// pipeliningExample.run();
-		couponFailureExample.run();
+		// couponFailureExample.run();
+		luaScriptExample.run();
 	}
 }
