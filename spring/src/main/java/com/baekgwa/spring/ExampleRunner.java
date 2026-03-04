@@ -8,6 +8,7 @@ import com.baekgwa.spring.example.ListExample;
 import com.baekgwa.spring.example.PubSubExample;
 import com.baekgwa.spring.example.SetExample;
 import com.baekgwa.spring.example.StringExample;
+import com.baekgwa.spring.example.TransactionExample;
 import com.baekgwa.spring.example.ZSetExample;
 
 /**
@@ -30,15 +31,18 @@ public class ExampleRunner implements CommandLineRunner {
 	private final HashExample hashExample;
 	private final ZSetExample zSetExample;
 	private final PubSubExample pubSubExample;
+	private final TransactionExample transactionExample;
 
 	public ExampleRunner(StringExample stringExample, ListExample listExample, SetExample setExample,
-			HashExample hashExample, ZSetExample zSetExample, PubSubExample pubSubExample) {
+			HashExample hashExample, ZSetExample zSetExample, PubSubExample pubSubExample,
+			TransactionExample transactionExample) {
 		this.stringExample = stringExample;
 		this.listExample = listExample;
 		this.setExample = setExample;
 		this.hashExample = hashExample;
 		this.zSetExample = zSetExample;
 		this.pubSubExample = pubSubExample;
+		this.transactionExample = transactionExample;
 	}
 
 	@Override
@@ -48,6 +52,7 @@ public class ExampleRunner implements CommandLineRunner {
 		// setExample.run();
 		// hashExample.run();
 		// zSetExample.run();
-		pubSubExample.run();
+		// pubSubExample.run();
+		transactionExample.run();
 	}
 }

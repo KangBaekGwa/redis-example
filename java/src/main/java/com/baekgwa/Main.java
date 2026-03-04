@@ -5,6 +5,7 @@ import com.baekgwa.example.ListExample;
 import com.baekgwa.example.PubSubExample;
 import com.baekgwa.example.SetExample;
 import com.baekgwa.example.StringExample;
+import com.baekgwa.example.TransactionExample;
 import com.baekgwa.example.ZSetExample;
 
 public class Main {
@@ -27,6 +28,9 @@ public class Main {
 		// ZSetExample.start();
 
 		// 6. Pub/Sub 예제
-		PubSubExample.start();
+		// PubSubExample.start();
+
+		// 7. Transaction 예제
+		TransactionExample.start();
 	}
 }

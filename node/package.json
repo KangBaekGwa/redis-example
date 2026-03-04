@@ -10,7 +10,8 @@
     "set": "ts-node src/set/index.ts",
     "hash": "ts-node src/hash/index.ts",
     "zset": "ts-node src/zset/index.ts",
-    "pubsub": "ts-node src/pubsub/index.ts"
+    "pubsub": "ts-node src/pubsub/index.ts",
+    "transaction": "ts-node src/transaction/index.ts"
   },
   "dependencies": {
     "ioredis": "^5.3.2"
