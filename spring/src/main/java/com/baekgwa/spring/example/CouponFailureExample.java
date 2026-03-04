@@ -48,7 +48,7 @@ public class CouponFailureExample {
 			return null;
 		});
 
-		// runPipelineFailureExample();
+		runPipelineFailureExample();
 		runTransactionFailureExample();
 	}
 

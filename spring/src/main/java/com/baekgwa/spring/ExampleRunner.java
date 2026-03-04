@@ -3,6 +3,7 @@ package com.baekgwa.spring;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
+import com.baekgwa.spring.example.CouponFailureExample;
 import com.baekgwa.spring.example.HashExample;
 import com.baekgwa.spring.example.ListExample;
 import com.baekgwa.spring.example.PipeliningExample;
@@ -34,10 +35,12 @@ public class ExampleRunner implements CommandLineRunner {
 	private final PubSubExample pubSubExample;
 	private final TransactionExample transactionExample;
 	private final PipeliningExample pipeliningExample;
+	private final CouponFailureExample couponFailureExample;
 
 	public ExampleRunner(StringExample stringExample, ListExample listExample, SetExample setExample,
 			HashExample hashExample, ZSetExample zSetExample, PubSubExample pubSubExample,
-			TransactionExample transactionExample, PipeliningExample pipeliningExample) {
+			TransactionExample transactionExample, PipeliningExample pipeliningExample,
+			CouponFailureExample couponFailureExample) {
 		this.stringExample = stringExample;
 		this.listExample = listExample;
 		this.setExample = setExample;
@@ -46,6 +49,7 @@ public class ExampleRunner implements CommandLineRunner {
 		this.pubSubExample = pubSubExample;
 		this.transactionExample = transactionExample;
 		this.pipeliningExample = pipeliningExample;
+		this.couponFailureExample = couponFailureExample;
 	}
 
 	@Override
@@ -57,6 +61,7 @@ public class ExampleRunner implements CommandLineRunner {
 		// zSetExample.run();
 		// pubSubExample.run();
 		// transactionExample.run();
-		pipeliningExample.run();
+		// pipeliningExample.run();
+		couponFailureExample.run();
 	}
 }
